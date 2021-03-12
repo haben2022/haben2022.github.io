@@ -1,0 +1,21 @@
+body{
+    width: 1400px;
+    height: 1200px;
+    background-color: lightblue; 
+}
+#image1{
+    width: 100px;
+    height: 100px;
+    /* float: left; */
+
+}
+#image2{
+    width: 100px;
+    height: 100px;
+    /* float: right; */
+
+}
+h1{
+    color: rgb(0, 183, 255);
+    font-weight: 10px;
+}
