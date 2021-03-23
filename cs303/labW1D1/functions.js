@@ -9,6 +9,9 @@
 
 
 function maxOfThree(a, b, c){ 
+    if(a<0) a=-1*a;
+    if(b<0) b=-1*b;
+    if(c<0) c=-1*c;
     let max=Math.max (a,b,c);
     return max;
 }
@@ -33,8 +36,8 @@ function sum(arr){
  */
 function multiply(arr){
     var total = 1;
-	for (let i = 0; i < arr2.length; i++) {
-		total = (total * arr2[i]);
+	for (let i = 0; i < arr.length; i++) {
+		total = (total * arr[i]);
 	}
 	return total;
 
@@ -47,18 +50,15 @@ function multiply(arr){
  * @returns The sum of the two numbers.
  */
  function findLongestWord(str) {
-    
-    
-  
-    let longestWordLength = 0;
+    let longestWord = str[0];
   
    for(var i = 0; i < str.length; i++){
-     if(longestWordLength < str[i].length){
-         longestWordLength = str[i].length;
+     if(longestWord.length < str[i].length){
+         longestWord= str[i];
         
      }
   }
-  return longestWordLength;
+  return longestWord;
   }
 
 
@@ -69,17 +69,25 @@ function multiply(arr){
  */
 
  function reverseArray(arr){
-    let j=0;
-    let temp;
-    let leng=Math.floor(arr.length/2);
-    for (let i=arr.length-1;i>=leng;i--){
-        temp=arr[j];
-        arr[j]=arr[i];
-        arr[i]=temp;
-        j++;
+    let revWord=[];
+    for (let i=arr.length-1;i>=0;i--){
+        revWord.push(arr[i])
     }
 
-    return arr;
+    return revWord;
+}
+/**
+ * 
+ * @param {*} arr 
+ * @returns 
+ */
+function reverseArrayInPlace(arr){
+    let revWord=[];
+    for (let i=arr.length-1;i>=0;i--){
+        revWord.push(arr[i])
+    }
+
+    return revWord
 }
 
 /**
@@ -100,4 +108,4 @@ function multiply(arr){
     }
     return score;
 }
-module.exports = {findLongestWord,scoreExams,sum,multiply,reverseArray,maxOfThree}
+module.exports = {findLongestWord,scoreExams,sum,multiply,reverseArray,maxOfThree,reverseArrayInPlace}

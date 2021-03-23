@@ -4,7 +4,7 @@
  */
 function pageLoad(){
     let subTotal;
-    let tipway;
+    let tip;
     var total;
     var totalElem =document.getElementById('total');
     let calculate=document.getElementById("btnum")
@@ -12,7 +12,7 @@ function pageLoad(){
     
     function calccompute() {
          subTotal =Number(document.getElementById('subtotal').value); 
-         tip=Number(document.getElementById('tipway').value); 
+         tip=Number(document.getElementById('tip').value); 
         total = (subTotal+subTotal*(tip/100));
         totalElem.innerHTML = '$' + total;
     }
