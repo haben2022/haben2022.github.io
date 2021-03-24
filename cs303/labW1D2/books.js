@@ -6,30 +6,100 @@ let library = [
     { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
 ];
 
-/**
- * Event handler to display library titles sorted alphabetically
- * @returns {undefined}
- */
-function showTitles() {
 
-    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+function addBook() {
+    let obj = {
 
-    const titles = findTitles();
+        title: document.getElementById("title").value,
+        author: document.getElementById("author").value,
+        libraryID: document.getElementById("Lid").value
 
-    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
-    titles.sort();
-    const titleString = titles.join("\n");
+    }
 
-    let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = titleString;
+    Library.push(obj)
+
+    
+
 }
 
 /**
  * 
- * @return {object} array holding all titles as elements
  */
-function findTitles() {
-    let titles = [];
-    // implement this and other functions
-    return titles;
+function showTitle() {
+
+
+    let result = Library.map(item => {
+        return item.title
+    })
+   
+    document.getElementById('txtarea').innerHTML = result.join('\n')
+    
+
+
+
 }
+
+/**
+ * 
+ */
+
+function showAuthor() {
+    let result = Library.map(item => {
+        return item.author
+    })
+    document.getElementById('txtarea').innerHTML = result.join('\n')
+
+}
+/**
+ * 
+ */
+function showId() {
+    let result = Library.map(item => {
+        return item.libraryID
+    })
+    document.getElementById('txtarea').innerHTML = result.join('\n')
+
+}
+
+function scramble() {
+
+    let result = Library.map(item => {
+        return item.title
+    
+});
+ 
+ let oneString = result.join(" ");
+ let arryOfWords=oneString.split(" ");
+ 
+
+ let word1=[];
+
+   for (n of arryOfWords){
+     if (n.length === 2){
+        word1.push(n);
+       
+     }
+   
+    }
+    
+    let word2=[];
+    for (n of arryOfWords){
+        if (n.length === 3){
+           word2.push(n);
+          
+        }
+      
+    }
+      
+        let word3=[];
+        for (n of arryOfWords){
+            if (n.length === 4){
+               word3.push(n);
+              
+            }
+      
+       }
+     document.getElementById('txtarea').innerHTML = word1+ "\n" +word2 + "\n"+ word3;
+    }
+    
+
