@@ -1,28 +1,58 @@
-"use strict";
+// "use strict";
 
-/**
- * @returns {Calculator} this is a constructor function
- */
-function Calculator() {
-    this.text = function() {
-        this.num1 = parseInt(prompt("enter first number:"));
-        this.num2 = parseInt(prompt("enter second number:"));
-      };
-    
-      this.sum = function() {
-        return this.num1 + this.num2;
-      };
-    
-      this.multp = function() {
-        return this.num1 * this.num2;
-      };
-    }
-    
-    let calculator = new Calculator();
-    calculator.text();
-    
-   console.log( "Sum=" + calculator.sum() );
-   
-        
-    console.log( "Mul=" + calculator.multp() );
+// /**
+//  * @returns {Calculator} this is a constructor function
+//  */
+// function Calculator() {
   
+//      thid.setValue=function(a,b){
+//        this.a=a;
+//        this.b=b;
+//      }
+//       this.sum = function() {
+//         return this.a + this.b;
+//       };
+    
+//       this.mul = function() {
+//         return this.a * this.b;
+//       };
+//     }
+  
+"use strict";
+/**
+ * * @returns {Calculator} constructor function
+ */
+function Calculator(){
+ this.setValue=function(a,b){
+ this.a=a;
+ this.b=b;
+ }
+ /**
+ * 
+ * @returns{Number} sum;
+ */
+ this.sum=function(){
+ return this.a+this.b;
+ };
+ /**
+ * 
+ * @returns {Number} multiplication;
+ */
+ this.mul=function(){
+ return this.a*this.b;
+ }
+ /**
+ * 
+ * @returns {Number} subtraction;
+ */
+ this.sub=function(){
+ return this.a-this.b
+ }
+ /**
+ * 
+ * @returns {Number} division;
+ */
+ this.div=function(){
+ return this.a/this.b;
+ }
+};

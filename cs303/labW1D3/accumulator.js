@@ -5,18 +5,16 @@
 
  * @returns {Accumulator} constructor function
  */
-function Accumulator(firstValue){
-//implement this
-this.value = firstValue;
-  
-this.text = function() {
-  this.value += parseInt(prompt('How much to add?'));
-};
-
+function Accumulator(curentValue,increment){
+   this.curentValue=curentValue;
+   this.increment=increment;
+   this.accumulate=function(){
+    return  this.curentValue+=this.increment;
+   }
+   this.report=function(){
+     return this.curentValue;
+   }
+    
 }
 
-let accumulator = new Accumulator(1);
-accumulator.text();
-accumulator.text();
-console.log(accumulator.value);
 
