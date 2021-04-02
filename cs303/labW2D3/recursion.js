@@ -53,3 +53,53 @@ return c;
 // console.log( fibonacci( 5 ));
 // console.log( fibonacci( 7 ));
 // console.log( fibonacci( 77 ));
+
+
+let list = {
+    value: 1,
+    next: {
+      value: 2,
+      next: {
+        value: 3,
+        next: {
+          value: 4,
+          next: null
+        }
+      }
+    }
+  };
+
+  function outputList( list ) {
+      console.log ( list.value );
+       
+      if ( list.next ){
+          outputList ( list.next );
+      }
+  }
+
+  outputList( list );
+
+
+  let list = {
+    value: 1,
+    next: {
+      value: 2,
+      next: {
+        value: 3,
+        next: {
+          value: 4,
+          next: null
+        }
+      }
+    }
+  };
+
+  function reverseList( list ) {
+    if (list.next) {
+        reverseList(list.next);
+      }
+    
+      console.log(list.value);
+  }
+
+  reverseList( list );
