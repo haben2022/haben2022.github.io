@@ -12,27 +12,27 @@ function sumTo( n ) {
     return sum;
 }
 
-console.log(sumTo( 4 ));
-console.log(sumTo( 10 ));
+// console.log(sumTo( 4 ));
+// console.log(sumTo( 10 ));
 
 /**
  * 
  * @param {number} n to calculate
  * @returns number
  */
- function calculateFactorial( n ) {
+ function factorial( n ) {
     if ( n===1 ) {
         return 1;
     }
     else {
-        return n * calculateFactorial( n-1 );
+        return n * factorial( n-1 );
     }
 }
 
 
-console.log(Factorial( 5 ));
-console.log(Factorial( 4 ));
-console.log(Factorial( 3 ));
+// console.log(Factorial( 5 ));
+// console.log(Factorial( 4 ));
+// console.log(Factorial( 3 ));
 
 /**
  * 
@@ -50,6 +50,6 @@ console.log(Factorial( 3 ));
 return c;
 }
 
-console.log( fibonacci( 5 ));
-console.log( fibonacci( 7 ));
-console.log( fibonacci( 77 ));
+// console.log( fibonacci( 5 ));
+// console.log( fibonacci( 7 ));
+// console.log( fibonacci( 77 ));
