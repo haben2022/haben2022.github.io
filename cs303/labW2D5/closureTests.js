@@ -31,14 +31,14 @@ describe("inBetween", function () {
 
     it("returns the filter for values between", function () {
         let filter3to6 = inBetween(3, 6);
-        assert.strictEqual(filter3to6(5), true);
-        assert.strictEqual(filter3to6(0), false);
+        assert.deepEqual(filter3to6(5), true);
+        assert.deepEqual(filter3to6(0), false);
     });
 
     it("tests inBetween works with Array.filter", function () {
         let filter3to6 = inBetween(3, 6);
         const arr2 = [0, 4, 5, 10, 6, 100];
-        assert.deepEqual(arr2.filter(filter3to6), [4, 5]);
+        assert.deepEqual(arr2.filter(filter3to6), [4, 5, 6]);
     });
 });
 
@@ -89,13 +89,13 @@ describe("byField", function(){
 
       it("army[0] shows 0", function() {
         const shooter0 = army[0]();
-        assert.strictEqual(shooter0, 0);
+        assert.deepEqual(shooter0, 0);
       });
 
 
       it("army[5] shows 5", function() {
         const shooter5 = army[5]();
-        assert.strictEqual(shooter5, 5);
+        assert.deepEqual(shooter5, 5);
       });
 
 
